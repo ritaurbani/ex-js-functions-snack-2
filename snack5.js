@@ -5,7 +5,6 @@
 // Nota: Questa funzione creerà un loop infinito.Interrompilo manualmente o usa clearInterval() 
 // in un altro script.
 
-//closure-funzione figlia accede a variabile funzione madre
 
 function stampaOgniSecondo(message){
     return setInterval(() => {
@@ -21,3 +20,6 @@ const interval = stampaOgniSecondo("ciao ciao")
 setTimeout(() => {
     clearInterval(interval)
 },2000)
+
+//Notes:
+//closure-funzione figlia accede a variabile funzione madre(message)
