@@ -10,17 +10,19 @@
 //ESECUZIONE
 function eseguiEferma(message, start, end) {
     //avvio interval dopo start (non subito)
-    setTimeout(() => {
         const intervalId = setInterval(() => {
             console.log(message)
-        }, 1000);
+        }, start);
+        
         //dopo end clear..
         setTimeout(() => {
             clearInterval(intervalId)
             console.log("end")
         }, end)
-
-    }, start)
 }
 
-console.log(eseguiEferma("ciao", 2000, 4000))
+console.log(eseguiEferma("ciao", 2000, 4000)) //stampo ogni 2 sec per 4 sec e poi mi fermo
+
+//NOTES
+// timer function ritornano la loro refernece in memoria: id che rappresenta dove si trova quell intervallo
+//

@@ -1,7 +1,9 @@
 
 //Traccia
 // Crea una funzione eseguiOperazione
-// Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore(callback).La funzione deve eseguire l'operazione fornita sui due numeri.
+// Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri 
+// e una funzione operatore(callback).
+// La funzione deve eseguire l'operazione fornita sui due numeri.
 
 // Esempio d’uso:
 // const somma = (a, b) => a + b;

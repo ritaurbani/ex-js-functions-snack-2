@@ -28,6 +28,7 @@ function sequenzaOperazioni(arr, time) {
 }
 
 //EXECUTION
+//voglio eseguire ogni funzione ogni 2 sec
 sequenzaOperazioni([
     () => console.log("Operazione 1"),
     () => console.log("Operazione 2"),

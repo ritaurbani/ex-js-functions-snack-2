@@ -23,7 +23,7 @@ function contoAllaRovescia(n) {
         console.log(start)
         start--;
         if (start === 0) {
-            clearInterval(intervalId)
+            clearInterval(intervalId)//questo id si vede anche all interno della funzione
             console.log("tempo scaduto")
         }
     }, 1000);
@@ -40,3 +40,6 @@ console.log(contoAllaRovescia(4))
 //     console.log("Inizio del countdown...");
 //     contoAllaRovescia(5);
 // }, 3000);`
+
+//concetto di closure
+//posso accedere a variabile start 

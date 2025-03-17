@@ -8,7 +8,8 @@
 
 //Esecuzione
 function creaTimer(time) {
-    return function() {
+    //devo aspettare del tempo prima di fare qualcosa - in timeout ho una callback eseguita dopo tempo
+    return function() { //qui posso scrivere return () => {}
     setTimeout (() => {
         console.log("tempo scaduto!")
     },time)

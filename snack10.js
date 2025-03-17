@@ -39,3 +39,19 @@ setTimeout(throttledLog, 2500); // ✅ "Eseguito!" (dopo 2.5 secondi)
 //Blocca l'esecuzione fino a quando il setTimeout non riporta isThrottled a false
 //Senza isThrottled, la funzione verrebbe eseguita ogni volta che viene chiamata, 
 //senza nessun controllo sul tempo minimo tra un’esecuzione e l’altra.
+//WEB SCRAPING -CHIAMATE API senza rischiare di farne troppe
+
+//ALTRA VERSIONE
+
+// function creaThrottler(fun, timeLimit) {
+//     let lastExecution = 0; // 
+
+//     return function () { //(...args) //accettare un qualsiasi numero di argomenti in questa funzione
+//         const ora = Date.now(); //ci ritorna timestamp numerico di ml secodni dal moemnto in cui abbiamo iniziato a contare
+
+//         if (ora - lastExecution >= timeLimit) { // Se è passato abbastanza tempo
+//             fun();
+//             lastExecution = ora; //
+//         }
+//     };
+// }

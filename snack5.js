@@ -8,7 +8,7 @@
 
 function stampaOgniSecondo(message){
     return setInterval(() => {
-        console.log("message")
+        console.log("message")//posso passare Math.random() per avere in console numeri diversi
     }, 1000)
 };
 
