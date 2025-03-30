@@ -42,6 +42,7 @@ console.log(somma)
 
 //Esempi altre operazioni
 //operazione= quadrato
+
 // const eseguiOperazioneQuadrato = (num1, funzioneCallback) => {
 //     //una volta invocata esegue questo su due parametri
 //     funzioneCallback(num1)

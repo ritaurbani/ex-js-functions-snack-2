@@ -7,7 +7,7 @@
 
 //EXECUTION
 function creaContatoreAutomatico(timeInterval) {
-    // let counter = 0;
+    // let counter = 0; funzione definita in un altra mantiene riferimento a parent
     return function () {
         let counter = 0;
         setInterval(() => {
@@ -17,8 +17,8 @@ function creaContatoreAutomatico(timeInterval) {
     }
 }
 
-//contatore con intervallo di 2 sec - non la eseguo subito ma la salvo ed eseguo quando voglio
-const contatore1 = creaContatoreAutomatico(1000) //possiamo passare ("uno", 1000) e passare name come parametro alla funzione
+
+const contatore1 = creaContatoreAutomatico(1000) 
 const contatore2 = creaContatoreAutomatico(2000)//possiamo passare ("due", 2000)
 //avvio contatore - esegue funzione restituita e avvia setinterval
 // contatore1()

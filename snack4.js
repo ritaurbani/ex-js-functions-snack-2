@@ -27,10 +27,3 @@ const timer = creaTimer(5000)
 //quando invoco timer eseguo funzione
 timer()
 
-//utilita`
-//posso creare diversi timer e farli partire quando voglio
-
-//versione breve
-// const creaTimer = (tempo) => () => setTimeout(() => 
-//     console.log("Tempo scaduto!"), tempo);
-

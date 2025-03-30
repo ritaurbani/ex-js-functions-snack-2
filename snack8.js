@@ -20,11 +20,12 @@ function contoAllaRovescia(n) {
     let start = n
 
     const intervalId = setInterval(() => {
-        console.log(start)
-        start--;
-        if (start === 0) {
+        if (start < 0) {
             clearInterval(intervalId)//questo id si vede anche all interno della funzione
             console.log("tempo scaduto")
+        }else{
+            console.log(start)
+            start--;
         }
     }, 1000);
 }
