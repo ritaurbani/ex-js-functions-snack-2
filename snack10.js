@@ -15,12 +15,11 @@
 
 
 function creaThrottler(fun, timeLimit) {
-    let isBlocked = false //sbloccato-blocco per evitare che funzione e chiamata troppo spesso
-
+    let isBlocked = false 
     return function() {
-        if (!isBlocked) //seisbloced false - non c`e`blocco
+        if (!isBlocked) //seisbloced false because is true- non c`e`blocco
         fun();
-        isBlocked = true //fino allo sblocco non si puo piu eseguire
+        isBlocked = true //blocca ulteriori esecuzioni fino allo sblocco non si puo piu eseguire - Blocca l'esecuzione fino a quando il setTimeout non riporta isThrottled a false
 
         setTimeout(()=> {
             isBlocked = false //dopo tempo limite sblocca
@@ -43,15 +42,17 @@ setTimeout(throttledLog, 2500); // ✅ "Eseguito!" (dopo 2.5 secondi)
 
 //ALTRA VERSIONE
 
-// function creaThrottler(fun, timeLimit) {
-//     let lastExecution = 0; // 
+function creaThrottler(fun, timeLimit) {
+    let lastExecution = 0; // prima volta eseguita
 
-//     return function () { //(...args) //accettare un qualsiasi numero di argomenti in questa funzione
-//         const ora = Date.now(); //ci ritorna timestamp numerico di ml secodni dal moemnto in cui abbiamo iniziato a contare
+    return function () { //(...args) //accettare un qualsiasi numero di argomenti in questa funzione
+        const ora = Date.now(); //ci ritorna timestamp numerico di ml secodni dal moemnto in cui abbiamo iniziato a contare
 
-//         if (ora - lastExecution >= timeLimit) { // Se è passato abbastanza tempo
-//             fun();
-//             lastExecution = ora; //
-//         }
-//     };
-// }
+        if (ora - lastExecution >= timeLimit) { // Se è passato abbastanza tempo
+            lastExecution = ora; //
+            fun();
+        }else{
+            console.log("non posso eseguire")
+        }
+    };
+}
