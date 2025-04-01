@@ -17,13 +17,6 @@ function creaTimer(time) {
 
 //valore di ritorno e' la funzione interna che salviamo in timer
 const timer = creaTimer(5000) 
-//quindi timer e`
-// function() {
-//     setTimeout(() => {
-//         console.log("tempo scaduto!")
-//     }, time)
-// }
 
-//quando invoco timer eseguo funzione
 timer()
 

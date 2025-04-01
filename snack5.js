@@ -6,20 +6,17 @@
 // in un altro script.
 
 
-function stampaOgniSecondo(message){
-    return setInterval(() => {
+function stampaOgniSecondo(message) {
+    setInterval(() => {
         console.log(message)//posso passare Math.random() per avere in console numeri diversi
     }, 1000)
 };
 
 const interval = stampaOgniSecondo("ciao ciao")
 
-//per fermare interval subito oppure dopo 2 sec:
+//per fermare interval subito oppure dopo 2 sec salvo in variabile e la uso:
 // clearInterval(interval)
 
 setTimeout(() => {
     clearInterval(interval)
-},2000)
-
-//Notes:
-//closure-funzione figlia accede a variabile funzione madre(message)
+}, 5000)
