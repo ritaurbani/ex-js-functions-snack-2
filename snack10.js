@@ -42,17 +42,17 @@ setTimeout(throttledLog, 2500); // ✅ "Eseguito!" (dopo 2.5 secondi)
 
 //ALTRA VERSIONE
 
-function creaThrottler(fun, timeLimit) {
-    let lastExecution = 0; // prima volta eseguita
+// function creaThrottler(fun, timeLimit) {
+//     let lastExecution = 0; // prima volta eseguita
 
-    return function () { //(...args) //accettare un qualsiasi numero di argomenti in questa funzione
-        const ora = Date.now(); //ci ritorna timestamp numerico di ml secodni dal moemnto in cui abbiamo iniziato a contare
+//     return function () { //(...args) //accettare un qualsiasi numero di argomenti in questa funzione
+//         const ora = Date.now(); //ci ritorna timestamp numerico di ml secodni dal moemnto in cui abbiamo iniziato a contare
 
-        if (ora - lastExecution >= timeLimit) { // Se è passato abbastanza tempo
-            lastExecution = ora; //
-            fun();
-        }else{
-            console.log("non posso eseguire")
-        }
-    };
-}
+//         if (ora - lastExecution >= timeLimit) { // Se è passato abbastanza tempo
+//             lastExecution = ora; //
+//             fun();
+//         }else{
+//             console.log("non posso eseguire")
+//         }
+//     };
+// }

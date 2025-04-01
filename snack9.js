@@ -35,10 +35,3 @@ sequenzaOperazioni([
     () => console.log("Operazione 3")
 ], 2000);
 
-//NOTES
-//con for loop
-// function sequenzaOperazioni(arr, time) {
-//     for (let i = 0; i < arr.length; i++) {
-//         setTimeout(arr[i], i * time);
-//     }
-// }
