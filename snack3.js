@@ -20,35 +20,17 @@ const eseguiOperazione = (num1, num2, funzioneCallback) => {
     return funzioneCallback(num1, num2)
 }
 
-const somma  = eseguiOperazione(2, 4, (a, b) => {
-    return a + b
-})
+//Operazioni-CallBack
+const somma = (a, b) => a + b
+const quadrato = num => num * num
 
-console.log(somma)
+console.log(eseguiOperazione(2,4, somma))
 
 
-// 2nd option
-// const somma = (a, b) => {
+// //Other Option
+// const somma2  = eseguiOperazione(2, 4, (a, b) => {
 //     return a + b
-// }
-
-// console.log(eseguiOperazione(2,4, somma))
-
-//Notes
-// funzioneCallback (parametro)
-// (a, b) => {
-// const somma = a + b
-// return somma
-
-//Esempi altre operazioni
-//operazione= quadrato
-
-// const eseguiOperazioneQuadrato = (num1, funzioneCallback) => {
-//     //una volta invocata esegue questo su due parametri
-//     funzioneCallback(num1)
-// }
-
-// eseguiOperazioneQuadrato(2, (num) => {
-//     const quadrato = num * num
-//     return quadrato
 // })
+
+// console.log(somma2)
+
